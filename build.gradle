@@ -15,13 +15,17 @@ apply plugin: 'application'
 
 apply plugin: 'javafx-gradle-plugin'
 
+mainClassName = 'com.github.andreysum.pfinance.PersonalFinanceApplication'
+
 repositories {
     mavenLocal()
     mavenCentral()
 }
 
 dependencies {
-    compile group: 'org.springframework', name: 'spring-core', version: '5.1.2.RELEASE'
+    def springVersion = '5.1.1.RELEASE'
+    compile group: 'org.springframework', name: 'spring-core', version: springVersion
+    compile group: 'org.springframework', name: 'spring-context', version: springVersion
 }
 
 
