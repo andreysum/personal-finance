@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pfinances.iml" filepath="$PROJECT_DIR$/pfinances.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pfinances_main.iml" filepath="$PROJECT_DIR$/.idea/modules/pfinances_main.iml" group="pfinances" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/pfinances_test.iml" filepath="$PROJECT_DIR$/.idea/modules/pfinances_test.iml" group="pfinances" />
+    </modules>
+  </component>
+</project>
