@@ -9,6 +9,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="pfinances_main" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-core:5.1.2.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework:spring-jcl:5.1.2.RELEASE" level="project" />
   </component>
   <component name="TestModuleProperties" production-module="pfinances_main" />
 </module>
