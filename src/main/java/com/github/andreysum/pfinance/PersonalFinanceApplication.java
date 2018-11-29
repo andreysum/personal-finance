@@ -1,16 +1,13 @@
 package com.github.andreysum.pfinance;
 
-import org.springframework.context.ResourceLoaderAware;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.util.Callback;
 
 /**
  * Главный класс JavaFX приложения.

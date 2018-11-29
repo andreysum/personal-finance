@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Label?>
 
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.TreeTableColumn?>
 <VBox>
-    <children>
-        <Label text="Hello world FXML"/>
-    </children>
+    <TreeTableView
+            fx:id="savingCategoryTable"
+            xmlns:fx="http://javafx.com/fxml">
+        <columns>
+            <TreeTableColumn text="Наименование категории"/>
+        </columns>
+    </TreeTableView>
 </VBox>
