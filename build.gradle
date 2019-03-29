@@ -29,8 +29,10 @@ dependencies {
     def springDataVersion = '2.1.3.RELEASE'
     def h2Version = '1.4.196'
     def hibernateVersion = '5.3.7.Final'
+    def kotlinReflectVersion = '1.3.21'
 
     compile group: 'org.jetbrains.kotlin', name: 'kotlin-stdlib-jdk8', version: kotlinVersion
+    compile group: 'org.jetbrains.kotlin', name: 'kotlin-reflect', version: kotlinReflectVersion
 
     compile group: 'org.springframework', name: 'spring-core', version: springVersion
     compile group: 'org.springframework', name: 'spring-context', version: springVersion

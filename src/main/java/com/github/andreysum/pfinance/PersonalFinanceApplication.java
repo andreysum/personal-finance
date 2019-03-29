@@ -1,5 +1,7 @@
 package com.github.andreysum.pfinance;
 
+import java.io.IOException;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.Resource;
 
@@ -15,17 +17,16 @@ import javafx.stage.Stage;
  * @author Andrey Sumtsov
  */
 public class PersonalFinanceApplication extends Application {
+    private static ClassPathXmlApplicationContext ctx;
+    private Parent root;
+
     public static void main(String[] args) {
         launch(args);
     }
+
     @Override
-    public void start(Stage primaryStage) throws Exception {
-        // Spring context initialization
-        ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("spring/application-context.xml");
-
-
-        // bugfix with fonts blur in linux
-        System.setProperty("prism.lcdtext", "false");
+    public void init() throws IOException {
+        ctx = new ClassPathXmlApplicationContext("spring/application-context.xml");
 
         final FXMLLoader loader = new FXMLLoader();
         // getting controllers through the Spring context
@@ -33,9 +34,24 @@ public class PersonalFinanceApplication extends Application {
 
         // stage initialization
         Resource fxmlDefinition = ctx.getResource("javafx/main.fxml");
-        Parent root = loader.load(fxmlDefinition.getInputStream());
+        root = loader.load(fxmlDefinition.getInputStream());
+
+        // bugfix with fonts blur in linux
+        System.setProperty("prism.lcdtext", "false");
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        // Spring context initialization
+
+
         primaryStage.setTitle("Персональные финансы");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+    }
+
+    @Override
+    public void stop() {
+        ctx.close();
     }
 }

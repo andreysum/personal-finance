@@ -3,10 +3,9 @@
 <?import javafx.scene.control.TreeTableView?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.TreeTableColumn?>
-<VBox>
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.github.andreysum.pfinance.controller.MainController">
     <TreeTableView
-            fx:id="savingCategoryTable"
-            xmlns:fx="http://javafx.com/fxml">
+            fx:id="savingCategoryTable">
         <columns>
             <TreeTableColumn text="Наименование категории"/>
         </columns>

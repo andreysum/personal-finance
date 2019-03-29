@@ -1,4 +1,4 @@
-package com.github.andreysum.pfinance.db
+package com.github.andreysum.pfinance.db.schema
 
 import org.springframework.data.annotation.AccessType
 import javax.persistence.*
@@ -11,13 +11,10 @@ import javax.persistence.*
 @Entity
 @Table(name = "category")
 @AccessType(AccessType.Type.FIELD)
-class CategoryEntity : BaseEntity {
-    protected constructor()
-    constructor(type: CategoryType)
+class CategoryEntity constructor(var title: String, val type: CategoryType = CategoryType.SAVING) : BaseEntity() {
+    constructor() : this("")
 
     @Enumerated
-    val type = CategoryType.SAVING
-    var title: String? = null
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parentid")
     var parent: CategoryEntity? = null

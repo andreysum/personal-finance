@@ -1,4 +1,4 @@
-package com.github.andreysum.pfinance.db
+package com.github.andreysum.pfinance.db.schema
 
 /**
  * Типы категорий.

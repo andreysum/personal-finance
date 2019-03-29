@@ -1,4 +1,4 @@
-package com.github.andreysum.pfinance.db
+package com.github.andreysum.pfinance.db.schema
 
 import javax.persistence.GeneratedValue
 import javax.persistence.Id
