@@ -17,8 +17,6 @@ apply plugin: 'application'
 apply plugin: 'javafx-gradle-plugin'
 apply plugin: 'kotlin'
 
-mainClassName = 'com.github.andreysum.pfinance.PersonalFinanceApplication'
-
 repositories {
     mavenLocal()
     mavenCentral()

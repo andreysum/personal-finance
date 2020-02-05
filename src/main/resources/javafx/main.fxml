@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.TreeTableColumn?>
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.github.andreysum.pfinance.controller.MainController">
-    <TreeTableView
-            fx:id="savingCategoryTable">
+    <TableView fx:id="savingCategoryTable">
         <columns>
-            <TreeTableColumn text="Наименование категории"/>
+            <TableColumn text="Наименование категории">
+                <cellValueFactory>
+                    <PropertyValueFactory property="title"/>
+                </cellValueFactory>
+            </TableColumn>
         </columns>
-    </TreeTableView>
+    </TableView>
 </VBox>
