@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.cell.TextFieldTableCell?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Priority?>
 <?import javafx.scene.layout.VBox?>
 <VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.github.andreysum.pfinance.controller.MainController">
-    <TableView fx:id="savingCategoryTable">
+    <TableView fx:id="table" editable="true">
+        <VBox.vgrow>
+            <Priority fx:value="ALWAYS"/>
+        </VBox.vgrow>
         <columns>
-            <TableColumn text="Наименование категории">
+            <TableColumn text="Наименование категории" onEditCommit="#onEditCommit">
                 <cellValueFactory>
                     <PropertyValueFactory property="title"/>
                 </cellValueFactory>
+                <cellFactory>
+                    <TextFieldTableCell fx:factory="forTableColumn"/>
+                </cellFactory>
             </TableColumn>
         </columns>
     </TableView>
